@@ -7,12 +7,33 @@
 <body>
 <script>
     var numb = prompt("Enter a number: ", '0');
+    // su dung cau truc if - else
+    /*
     if (numb > 0) {
         alert(1);
     } else if (numb < 0) {
         alert(-1);
     } else {
         alert(0);
+    }
+    */
+
+    // su dung cau truc switch case
+    var greaterThan0 = numb > 0;
+    var equalTo0 = numb == 0;
+    switch(equalTo0) {
+        case true:
+            alert(0);
+            break;
+        case false:
+            switch(greaterThan0) {
+                case true:
+                    alert(1);
+                    break;
+                case false:
+                    alert(-1);
+                    break;
+            }
     }
 </script>
 </body>
